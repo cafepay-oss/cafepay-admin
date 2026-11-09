@@ -1,0 +1,424 @@
+{"data": [
+  {
+    "pk": 1,
+    "name": "منو بهاره",
+    "is_active": true,
+    "staff": 1,
+    "no_category": [{
+      "pk": 1,
+      "cafe": {
+        "pk": 1,
+        "name": "Cafe Ali"
+      },
+      "name": "اسپرسو",
+      "description": "یک قهوه خوشمزه",
+      "price": 12000,
+      "category_retrieve": null,
+      "menu_retrieve": [{
+          "pk": 2,
+          "name": "منو تابستانه"
+        },
+        {
+          "pk": 1,
+          "name": "منو بهاره"
+        }
+      ],
+      "staff": 1,
+      "is_delete": false
+    }],
+    "products_by_category": [{
+        "pk": 1,
+        "title": "نوشیدنی",
+        "cafe": 1,
+        "staff": 5,
+        "products_retrieve": [{
+          "pk": 2,
+          "cafe": {
+            "pk": 1,
+            "name": "Cafe Ali"
+          },
+          "name": "موهیتو",
+          "description": null,
+          "price": 18000,
+          "category_retrieve": {
+            "pk": 1,
+            "title": "نوشیدنی"
+          },
+          "menu_retrieve": [{
+              "pk": 2,
+              "name": "منو تابستانه"
+            },
+            {
+              "pk": 1,
+              "name": "منو بهاره"
+            }
+          ],
+          "staff": 5,
+          "is_delete": false
+        }]
+      },
+      {
+        "pk": 2,
+        "title": "پیتزا",
+        "cafe": 1,
+        "staff": 5,
+        "products_retrieve": [{
+            "pk": 7,
+            "cafe": {
+              "pk": 1,
+              "name": "Cafe Ali"
+            },
+            "name": "مخصوص علی",
+            "description": "مخصوص علی ولی برای همه",
+            "price": 40000,
+            "category_retrieve": {
+              "pk": 2,
+              "title": "پیتزا"
+            },
+            "menu_retrieve": [{
+              "pk": 1,
+              "name": "منو بهاره"
+            }],
+            "staff": 5,
+            "is_delete": false
+          },
+          {
+            "pk": 3,
+            "cafe": {
+              "pk": 1,
+              "name": "Cafe Ali"
+            },
+            "name": "پپرونی",
+            "description": null,
+            "price": 35000,
+            "category_retrieve": {
+              "pk": 2,
+              "title": "پیتزا"
+            },
+            "menu_retrieve": [{
+                "pk": 2,
+                "name": "منو تابستانه"
+              },
+              {
+                "pk": 1,
+                "name": "منو بهاره"
+              }
+            ],
+            "staff": 5,
+            "is_delete": false
+          }
+        ]
+      },
+      {
+        "pk": 3,
+        "title": "برگر",
+        "cafe": 1,
+        "staff": 5,
+        "products_retrieve": [{
+            "pk": 6,
+            "cafe": {
+              "pk": 1,
+              "name": "Cafe Ali"
+            },
+            "name": "دوبل برگر",
+            "description": "دوبل برگر به اون میگن",
+            "price": 32000,
+            "category_retrieve": {
+              "pk": 3,
+              "title": "برگر"
+            },
+            "menu_retrieve": [{
+                "pk": 2,
+                "name": "منو تابستانه"
+              },
+              {
+                "pk": 1,
+                "name": "منو بهاره"
+              }
+            ],
+            "staff": 4,
+            "is_delete": false
+          },
+          {
+            "pk": 4,
+            "cafe": {
+              "pk": 1,
+              "name": "Cafe Ali"
+            },
+            "name": "چیزبرگر",
+            "description": "چیزبرگر به این میگن",
+            "price": 28000,
+            "category_retrieve": {
+              "pk": 3,
+              "title": "برگر"
+            },
+            "menu_retrieve": [{
+                "pk": 2,
+                "name": "منو تابستانه"
+              },
+              {
+                "pk": 1,
+                "name": "منو بهاره"
+              }
+            ],
+            "staff": 5,
+            "is_delete": false
+          }
+        ]
+      },
+      {
+        "pk": 4,
+        "title": "ایرانی",
+        "cafe": 1,
+        "staff": 3,
+        "products_retrieve": [{
+          "pk": 5,
+          "cafe": {
+            "pk": 1,
+            "name": "Cafe Ali"
+          },
+          "name": "حلیم بادمجون",
+          "description": "حلیم بادمجون به این میگن جون بابا",
+          "price": 12000,
+          "category_retrieve": {
+            "pk": 4,
+            "title": "ایرانی"
+          },
+          "menu_retrieve": [{
+            "pk": 1,
+            "name": "منو بهاره"
+          }],
+          "staff": 3,
+          "is_delete": false
+        }]
+      },
+      {
+        "pk": 5,
+        "title": "سالاد",
+        "cafe": 1,
+        "staff": 5,
+        "products_retrieve": [{
+          "pk": 8,
+          "cafe": {
+            "pk": 1,
+            "name": "Cafe Ali"
+          },
+          "name": "سزار",
+          "description": "سالاد سزارمون حرف نداره",
+          "price": 22000,
+          "category_retrieve": {
+            "pk": 5,
+            "title": "سالاد"
+          },
+          "menu_retrieve": [{
+            "pk": 1,
+            "name": "منو بهاره"
+          }],
+          "staff": 5,
+          "is_delete": false
+        }]
+      }
+    ]
+  }, {
+    "pk": 2,
+    "name": "منو تابستانه",
+    "is_active": false,
+    "staff": 5,
+    "no_category": [{
+      "pk": 1,
+      "cafe": {
+        "pk": 1,
+        "name": "Cafe Ali"
+      },
+      "name": "اسپرسو",
+      "description": "یک قهوه خوشمزه",
+      "price": 12000,
+      "category_retrieve": null,
+      "menu_retrieve": [{
+          "pk": 2,
+          "name": "منو تابستانه"
+        },
+        {
+          "pk": 1,
+          "name": "منو بهاره"
+        }
+      ],
+      "staff": 1,
+      "is_delete": false
+    }],
+    "products_by_category": [{
+        "pk": 1,
+        "title": "نوشیدنی",
+        "cafe": 1,
+        "staff": 5,
+        "products_retrieve": [{
+          "pk": 2,
+          "cafe": {
+            "pk": 1,
+            "name": "Cafe Ali"
+          },
+          "name": "موهیتو",
+          "description": null,
+          "price": 18000,
+          "category_retrieve": {
+            "pk": 1,
+            "title": "نوشیدنی"
+          },
+          "menu_retrieve": [{
+              "pk": 2,
+              "name": "منو تابستانه"
+            },
+            {
+              "pk": 1,
+              "name": "منو بهاره"
+            }
+          ],
+          "staff": 5,
+          "is_delete": false
+        }]
+      },
+      {
+        "pk": 2,
+        "title": "پیتزا",
+        "cafe": 1,
+        "staff": 5,
+        "products_retrieve": [{
+            "pk": 7,
+            "cafe": {
+              "pk": 1,
+              "name": "Cafe Ali"
+            },
+            "name": "مخصوص علی",
+            "description": "مخصوص علی ولی برای همه",
+            "price": 40000,
+            "category_retrieve": {
+              "pk": 2,
+              "title": "پیتزا"
+            },
+            "menu_retrieve": [{
+              "pk": 1,
+              "name": "منو بهاره"
+            }],
+            "staff": 5,
+            "is_delete": false
+          },
+          {
+            "pk": 3,
+            "cafe": {
+              "pk": 1,
+              "name": "Cafe Ali"
+            },
+            "name": "پپرونی",
+            "description": null,
+            "price": 35000,
+            "category_retrieve": {
+              "pk": 2,
+              "title": "پیتزا"
+            },
+            "menu_retrieve": [{
+                "pk": 2,
+                "name": "منو تابستانه"
+              },
+              {
+                "pk": 1,
+                "name": "منو بهاره"
+              }
+            ],
+            "staff": 5,
+            "is_delete": false
+          }
+        ]
+      },
+      {
+        "pk": 3,
+        "title": "برگر",
+        "cafe": 1,
+        "staff": 5,
+        "products_retrieve": [{
+            "pk": 6,
+            "cafe": {
+              "pk": 1,
+              "name": "Cafe Ali"
+            },
+            "name": "دوبل برگر",
+            "description": "دوبل برگر به اون میگن",
+            "price": 32000,
+            "category_retrieve": {
+              "pk": 3,
+              "title": "برگر"
+            },
+            "menu_retrieve": [{
+                "pk": 2,
+                "name": "منو تابستانه"
+              },
+              {
+                "pk": 1,
+                "name": "منو بهاره"
+              }
+            ],
+            "staff": 4,
+            "is_delete": false
+          },
+          {
+            "pk": 4,
+            "cafe": {
+              "pk": 1,
+              "name": "Cafe Ali"
+            },
+            "name": "چیزبرگر",
+            "description": "چیزبرگر به این میگن",
+            "price": 28000,
+            "category_retrieve": {
+              "pk": 3,
+              "title": "برگر"
+            },
+            "menu_retrieve": [{
+                "pk": 2,
+                "name": "منو تابستانه"
+              },
+              {
+                "pk": 1,
+                "name": "منو بهاره"
+              }
+            ],
+            "staff": 5,
+            "is_delete": false
+          }
+        ]
+      }
+    ]
+  }, {
+    "pk": 3,
+    "name": "منو صبحانه",
+    "is_active": false,
+    "staff": 5,
+    "no_category": [],
+    "products_by_category": [{
+      "pk": 6,
+      "title": "صبحانه",
+      "cafe": 1,
+      "staff": 5,
+      "products_retrieve": [{
+        "pk": 9,
+        "cafe": {
+          "pk": 1,
+          "name": "Cafe Ali"
+        },
+        "name": "نیمرو",
+        "description": "نیمرو بزن سرحال بشی",
+        "price": 8000,
+        "category_retrieve": {
+          "pk": 6,
+          "title": "صبحانه"
+        },
+        "menu_retrieve": [{
+          "pk": 3,
+          "name": "منو صبحانه"
+        }],
+        "staff": 5,
+        "is_delete": false
+      }]
+    }]
+  }
+]
+}

@@ -1,0 +1,5 @@
+{
+    "platform": "vue",
+    "app": "cfpy-admin",
+    "port": 80
+}

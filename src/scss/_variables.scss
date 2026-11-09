@@ -1,0 +1,72 @@
+// Set your colors
+$primary: #075a85;
+$secondary: #9c2942;
+$thirdinary: #006fb9;
+$black: #4a4a4a;
+$darkGrey: #595959;
+$grey: #717070;
+$lightGrey: #e4e4e4;
+$lightblue: #29abe2;
+$blueShade: #f2f6f9;
+$green: #116149;
+$success: #116149;
+$success-invert: #fff;
+$danger: #9c2942;
+$danger-invert: #fff;
+$warning: #f8dc92;
+$warning-invert: #5c4100;
+
+$primary-invert: findColorInvert($primary);
+$secondary-invert: findColorInvert($secondary);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+  "white": (
+    $white,
+    $black,
+  ),
+  "black": (
+    $black,
+    $white,
+  ),
+  "light": (
+    $light,
+    $light-invert,
+  ),
+  "dark": (
+    $dark,
+    $dark-invert,
+  ),
+  "primary": (
+    $green,
+    $primary-invert,
+  ),
+  "secondary": (
+    $secondary,
+    $secondary-invert,
+  ),
+  "info": (
+    $primary,
+    $primary-invert,
+  ),
+  "success": (
+    $success,
+    $success-invert,
+  ),
+  "warning": (
+    $warning,
+    $warning-invert,
+  ),
+  "danger": (
+    $danger,
+    $danger-invert,
+  ),
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";

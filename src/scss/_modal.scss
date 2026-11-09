@@ -1,0 +1,17 @@
+.modal-card {
+  width: $modal-card-width;
+}
+
+.modal-card-foot {
+  & .button:not(:last-child) {
+    margin-inline-end: 0.5em !important;
+  }
+  background-color: $modal-card-foot-background-color;
+}
+
+@include mobile {
+  .modal .animation-content .modal-card {
+    width: $modal-card-width-mobile;
+    margin: 0 auto;
+  }
+}

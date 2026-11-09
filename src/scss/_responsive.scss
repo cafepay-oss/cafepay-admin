@@ -1,0 +1,93 @@
+// Keep layout dimensions independent from device user-agent detection.
+#app {
+  height: 100vh;
+  height: 100dvh;
+  min-width: 0;
+  .app__body { min-width: 0; flex: 1; }
+  .app__body__content { min-height: 0; min-width: 0; }
+  aside.aside { flex: 0 0 15rem; width: 15rem; height: 100%; }
+  aside.sidebar-collapsed { display: none; }
+  .is-menu-main { min-height: 0; overflow-y: auto; }
+  .navbar-sidebar-collapse { border: 0; min-width: 2.5rem; min-height: 3.25rem; }
+  .navbar-account-toggle, .sidebar-backdrop { display: none; }
+  .table-detail-container {
+    right: auto;
+    left: auto;
+    inset-inline-start: 15rem;
+    inset-inline-end: 0;
+    max-height: calc(100% - 3.5rem);
+  }
+  .table-detail-container.full-width { inset-inline-start: 0; }
+  .table-detail { overflow-y: auto; overscroll-behavior: contain; transition: none; }
+  .table-detail__tab--products__buttons {
+    flex-wrap: wrap;
+    gap: .5rem;
+    > div, > span { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .button { margin: 0; }
+  }
+}
+
+@media (max-width: 1023px) {
+  html.has-aside-mobile-expanded #app,
+  html.has-aside-mobile-expanded nav.navbar { margin-inline-start: 0; }
+  html.has-aside-mobile-transition #app,
+  html.has-aside-mobile-transition nav.navbar { width: 100%; }
+  #app {
+    aside.aside {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: auto;
+      inset-inline-start: 0;
+      width: 18rem;
+      max-width: calc(100vw - 3rem);
+      z-index: 70;
+      height: 100vh;
+      height: 100dvh;
+    }
+    aside.sidebar-mobile-open { display: flex; }
+    aside .menu-list span.menu-item-label { display: inline-block; }
+    aside .menu-list li.is-active ul { display: block; }
+    .sidebar-backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 0;
+      background: rgba(0, 0, 0, .45);
+      z-index: 60;
+    }
+    nav.navbar { flex-shrink: 0; justify-content: space-between; }
+    .navbar-brand.is-right { flex: 1; min-width: 0; }
+    .navbar-account-toggle { display: block; border: 0; background: white; min-width: 3rem; }
+    .navbar-menu { width: 100%; z-index: 40; }
+    .timer { min-width: 0; flex-wrap: wrap; gap: .2rem; padding: .25rem; }
+    .contact-support { display: none; }
+    .timer__text { margin-inline-start: .3rem; }
+    .table-detail-container, .table-detail-container.full-width {
+      inset-inline-start: 0;
+      inset-inline-end: 0;
+      height: calc(100% - 3.5rem);
+    }
+    .table-detail { padding: .75rem; }
+    .table-detail__container { margin: 2rem 0 0; }
+    .table-detail__data { position: static; justify-content: space-between; margin-bottom: .75rem; }
+    .table-detail__data__name { padding: 0; overflow-wrap: anywhere; }
+    .table-detail .tabs ul { flex-wrap: wrap; }
+    .table-detail .tab-content { padding: .75rem 0; }
+    .table-detail .table-products { height: auto; overflow: visible; }
+    .table-detail .table-wrapper { max-width: 100%; overflow-x: auto; }
+    .table-detail .table-wrapper.has-sticky-header { height: auto; max-height: none; }
+    .section { padding: 1rem; }
+    .modal-card { max-width: calc(100vw - 1rem); margin: .5rem; }
+    .modal-card-foot { flex-wrap: wrap; gap: .5rem; }
+    .modal-card-title { font-size: 1.1rem; line-height: 1.8; }
+  }
+}
+@media (max-width: 480px) {
+  #app .timer__text { display: none; }
+  #app .timer__time-spent { display: none; }
+}

@@ -1,0 +1,199 @@
+@include desktop {
+  html {
+    &.has-aside-left {
+      nav.navbar,
+      body {
+        @include transition(padding-inline-end);
+      }
+      aside.is-placed-left {
+        display: flex;
+        flex-direction: column;
+        .is-menu-main {
+          overflow-y: auto;
+          
+          &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+            background-color: #b8b1b1;
+          }
+
+          &::-webkit-scrollbar {
+            width: 10px;
+            background-color: #b8b1b1;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: #464a50;
+          }
+        }
+      }
+    }
+  }
+  aside.aside.is-expanded {
+    width: $aside-width;
+    .menu-list {
+      @include icon-with-update-mark($aside-icon-width);
+      span.menu-item-label {
+        display: inline-block;
+      }
+      li.is-active {
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .fa {
+    & .is-menu-main {
+      direction: ltr;
+
+      & > * {
+        direction: rtl;
+      }
+    }
+  }
+  .en {
+    & .is-menu-main {
+      direction: rtl;
+    
+      & > * {
+        direction: ltr;
+      }
+    }
+  }
+}
+
+aside.aside {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  z-index: 40;
+  height: 100vh;
+  padding: 0;
+  box-shadow: $aside-box-shadow;
+  background: $aside-background-color;
+  .aside-tools {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: $aside-tools-background-color;
+    color: $aside-tools-color;
+    line-height: $navbar-height;
+    max-height: $navbar-height;
+    padding-inline-start: $default-padding * 0.5;
+    flex: 1;
+    .icon {
+      margin-inline-end: $default-padding * 0.5;
+    }
+  }
+  .menu-list {
+    li {
+      a {
+        color: #b0b0b0;
+        &.has-dropdown-icon {
+          position: relative;
+          padding-inline-end: $aside-icon-width * 0.2;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          .dropdown-icon {
+            position: relative;
+            margin-inline-start: auto;
+          }
+        }
+      }
+      a:hover,
+      a.is-active {
+        color: white;
+      }
+      ul {
+        display: none;
+        border-left: 0;
+        background-color: darken($base-color, 2.5%);
+        padding-inline-start: 0;
+        margin: 0 0 $default-padding * 0.5;
+        li {
+          a {
+            padding: $default-padding * 0.5 $default-padding * 0.5
+              $default-padding * 0.5 0;
+            font-size: $aside-submenu-font-size;
+            &.has-icon {
+              padding-inline-start: 0;
+            }
+            &.is-active {
+              &:not(:hover) {
+                background: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .menu-label {
+    color: #00aeff;
+    padding: 0 $default-padding * 0.5;
+    margin-top: $default-padding * 0.5;
+    margin-bottom: $default-padding * 0.5;
+    letter-spacing: 0;
+  }
+}
+
+@include touch {
+  #app,
+  nav.navbar {
+    @include transition(margin-inline-start);
+  }
+  aside.aside {
+    @include transition(left);
+  }
+  html.has-aside-mobile-transition {
+    body {
+      overflow-x: hidden;
+    }
+    body,
+    #app,
+    nav.navbar {
+      width: 100vw;
+    }
+    aside.aside {
+      width: $aside-mobile-width;
+      display: block;
+      left: $aside-mobile-width * -1;
+      .image {
+        img {
+          max-width: $aside-mobile-width * 0.33;
+        }
+      }
+      .menu-list {
+        li.is-active {
+          ul {
+            display: block;
+          }
+        }
+        a {
+          @include icon-with-update-mark($aside-icon-width);
+          span.menu-item-label {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  html.has-aside-mobile-expanded {
+    #app,
+    nav.navbar {
+      margin-inline-start: $aside-mobile-width;
+    }
+    aside.aside {
+      left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  html.has-aside-mobile-transition aside.aside {
+      left: auto !important;
+  }
+}

@@ -1,0 +1,28 @@
+section.hero.is-hero-bar {
+  background-color: $hero-bar-background;
+  border-bottom: $light-border;
+  .hero-body {
+    padding: $default-padding;
+    .level-item {
+      &.is-hero-avatar-item {
+        margin-inline-end: $default-padding;
+      }
+      >div>.level {
+        margin-bottom: $default-padding;
+      }
+      .subtitle+p {
+        margin-top: $default-padding;
+      }
+    }
+    .button {
+      &.is-hero-button {
+        background-color: rgba($white, 0.5);
+        font-weight: 300;
+        @include transition(background-color);
+        &:hover {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
