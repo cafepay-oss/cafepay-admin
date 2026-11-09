@@ -127,6 +127,7 @@ $ui-disabled-text: #526273;
   .order-toolbar__group { flex: 1 1 24rem; padding: .85rem; background: #f7f9fc; border: 1px solid #e4eaf1; border-radius: .65rem; }
   .order-toolbar__group--payment { background: #f4faf7; border-color: #dbece3; }
   .order-toolbar__label { color: $ui-muted; font-size: .75rem; margin-bottom: .6rem; }
+  .payment-entry-help { color: $ui-muted; font-size: .85rem; line-height: 1.8; margin-bottom: .75rem; }
   .order-toolbar__actions { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
   .order-toolbar .button { margin: 0; }
   .table-detail .table th { background: #f3f6fa; color: $ui-muted; font-weight: 500; line-height: 1.7; }

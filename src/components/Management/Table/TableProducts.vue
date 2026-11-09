@@ -12,6 +12,7 @@
           </p>
         </header>
         <section class="modal-card-body">
+          <p class="payment-entry-help">{{ $t('cafeManagement.manualPaymentDialogHelp') }}</p>
           <p>
             {{ $t("cafeManagement.pleaseSelectYourPaymentMethod") }}
             <br />
@@ -87,11 +88,12 @@
         </div>
       </div>
       <div class="order-toolbar__group order-toolbar__group--payment">
-        <p class="order-toolbar__label">پرداخت</p>
+        <p class="order-toolbar__label">{{ $t('cafeManagement.manualPaymentTitle') }}</p>
+        <p class="payment-entry-help">{{ $t('cafeManagement.manualPaymentHelp') }}</p>
         <div class="order-toolbar__actions">
           <b-button v-if="tableDetail.paymentInfo && tableDetail.paymentInfo.net_amount" type="is-success" outlined
             icon-left="credit-card" :loading="isLoading" :disabled="!isThereAnyPaymentAmount"
-            @click="$store.state.tableModule.isPayInvoiceModalActive = true">پرداخت انتخاب‌شده</b-button>
+            @click="$store.state.tableModule.isPayInvoiceModalActive = true">{{ $t('cafeManagement.paySelectedAmount') }}</b-button>
           <b-button v-if="tableDetail.paymentInfo && tableDetail.paymentInfo.net_amount" type="is-success"
             icon-left="check-circle-outline" :loading="isLoading"
             @click="$store.state.tableModule.isCloseInvoiceModalActive = true">{{ $t('cafeManagement.payRemainingAmount') }}</b-button>

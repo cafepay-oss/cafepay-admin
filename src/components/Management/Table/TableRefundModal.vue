@@ -4,6 +4,8 @@
       <p class="modal-card-title">{{ $t("cafeManagement.refund") }}</p>
     </header>
     <section class="modal-card-body">
+      <p class="payment-entry-help">{{ $t('cafeManagement.refundWalletHelp') }}</p>
+      <p class="payment-entry-help">{{ $t('cafeManagement.refundManualHelp') }}</p>
       <b-table
         class="table refund-table"
         :data="tableInvoices"
@@ -124,7 +126,7 @@
         :disabled="!isThereAnyRefundAmount"
         @click="refund()"
         class="button done is-info"
-        >{{ $t("primary.submit") }}</b-button
+        >{{ $t("cafeManagement.confirmRefund") }}</b-button
       >
       <b-button
         :loading="isLoading"

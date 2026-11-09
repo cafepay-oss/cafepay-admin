@@ -409,7 +409,7 @@ export default {
           context.state.isPayInvoiceModalActive = false;
           Toast.open({
             queue: false,
-            message: " پرداخت با موفقیت انجام شد",
+            message: "پرداخت دریافتی به‌صورت دستی ثبت شد",
             type: "is-success",
           });
           return true;
@@ -417,7 +417,7 @@ export default {
         .catch((err) => {
           Toast.open({
             queue: false,
-            message: "مشکلی در پرداخت به وجود آمد",
+            message: "ثبت دستی پرداخت انجام نشد",
             type: "is-danger",
           });
           return false;
@@ -484,7 +484,7 @@ export default {
         .then((res) => {
           Toast.open({
             queue: false,
-            message: "صورتحساب میز با موفقیت پرداخت شد",
+            message: "پرداخت دریافتی صورتحساب میز به‌صورت دستی ثبت شد",
             type: "is-success",
           });
 
@@ -493,7 +493,7 @@ export default {
         .catch((err) => {
           Toast.open({
             queue: false,
-            message: "مشکلی در پرداخت صورتحساب میز به وجود آمد",
+            message: "ثبت دستی پرداخت صورتحساب میز انجام نشد",
             type: "is-danger",
           });
           //console.log(err);

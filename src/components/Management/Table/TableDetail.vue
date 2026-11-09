@@ -14,6 +14,7 @@
           </p>
         </header>
         <section class="modal-card-body">
+          <p class="payment-entry-help">{{ $t('cafeManagement.manualPaymentDialogHelp') }}</p>
           <p>
             {{ $t("cafeManagement.pleaseSelectYourPaymentMethod") }}
             <br />
